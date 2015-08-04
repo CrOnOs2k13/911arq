@@ -1,0 +1,39 @@
+<?php
+
+// generado usando artisan make:migration --create='productos' create_productos_table
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateUsersTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('productos', function(Blueprint $table)
+		{
+			$table->integer('tienda');
+			$table->increments('prod_id');
+			$table->boolean('patrocinado');
+			$table->string('nombre');
+			$table->string('descripcion');
+			$table->string('codigo');
+			$table->decimal('precio',8,2);
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('productos');
+	}
+
+}

@@ -1,0 +1,36 @@
+<?php
+
+// generado usando artisan make:migration --create='tiendas' create_tiendas_table
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateUsersTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('tiendas', function(Blueprint $table)
+		{
+			$table->integer('id');
+			$table->string('nombre');
+			$table->longText('direccion');
+			$table->string('telefono', 60);
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('tiendas');
+	}
+
+}

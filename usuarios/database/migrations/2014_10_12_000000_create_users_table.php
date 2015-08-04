@@ -1,7 +1,5 @@
 <?php
 
-// generado usando artisan make:migration --create='users' create_users_table
-
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
